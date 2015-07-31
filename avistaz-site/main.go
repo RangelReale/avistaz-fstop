@@ -30,7 +30,7 @@ func main() {
 	// create logger
 	logger := log.New(os.Stderr, "", log.LstdFlags)
 
-	config := fstopsite.NewConfig(13112)
+	config := fstopsite.NewConfig(13113)
 	config.Title = "Avistaz Top"
 	config.Logger = logger
 	config.Session = session
