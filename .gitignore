@@ -1,0 +1,4 @@
+*.exe
+/avistaz-importer/avistaz-importer*
+/avistaz-site/avistaz-site*
+avistaz-current.conf
