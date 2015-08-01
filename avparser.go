@@ -64,6 +64,10 @@ func (p *AVParser) Parse(sort AVSort, sortby AVSortBy, pages int) error {
 		cookies, _ := cookiejar.New(nil)
 		cookies.SetCookies(u, []*http.Cookie{
 			&http.Cookie{Name: "avistaz_session", Value: p.config.Avistaz_session, Path: "/", Domain: "avistaz.to"},
+			&http.Cookie{Name: "__cfduid", Value: p.config.Cfduid, Path: "/", Domain: "avistaz.to"},
+			&http.Cookie{Name: "XSRF-TOKEN", Value: p.config.XSRF_TOKEN, Path: "/", Domain: "avistaz.to"},
+			&http.Cookie{Name: "avistazlove", Value: p.config.Avistazlove, Path: "/", Domain: "avistaz.to"},
+			&http.Cookie{Name: fmt.Sprintf("remember_%s", p.config.Remember_id), Value: p.config.Remember, Path: "/", Domain: "avistaz.to"},
 		})
 
 		client := &http.Client{

@@ -4,8 +4,15 @@ import (
 	"github.com/BurntSushi/toml"
 )
 
+
+
 type Config struct {
 	Avistaz_session string
+	XSRF_TOKEN string
+	Avistazlove string
+	Cfduid string
+	Remember_id string
+	Remember string
 }
 
 func NewConfig() *Config {

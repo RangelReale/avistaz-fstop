@@ -56,7 +56,7 @@ func TestDownload(t *testing.T) {
 
 func TestFetcher(t *testing.T) {
 	c := NewConfig()
-	c.avistaz_session = ""
+	c.Avistaz_session = ""
 	f := NewFetcher(c)
 	f.SetLogger(log.New(ioutil.Discard, "", 0))
 	i, err := f.Fetch()
