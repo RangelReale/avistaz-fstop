@@ -92,7 +92,7 @@ func (p *AVParser) Parse(sort AVSort, sortby AVSortBy, pages int) error {
 
 		// regular expressions
 		re_id := regexp.MustCompile("/torrent/(\\d+)-")
-		re_category := regexp.MustCompile("gi-(\\w+)")
+		re_category := regexp.MustCompile("fa-(\\w+)")
 		re_category_cat3 := regexp.MustCompile("text-pink")
 		re_adddate := regexp.MustCompile("(\\d+) (\\w+)")
 
@@ -129,7 +129,7 @@ func (p *AVParser) Parse(sort AVSort, sortby AVSortBy, pages int) error {
 
 			lid := idmatch[0][1]
 
-			category := s.Find("td > i.gi").First()
+			category := s.Find("td > i.fa").First()
 			if category.Length() == 0 {
 				p.logger.Println("ERROR: Category not found")
 				return

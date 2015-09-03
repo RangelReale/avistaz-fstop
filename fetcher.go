@@ -47,7 +47,7 @@ func (f *Fetcher) Fetch() (map[string]*fstoplib.Item, error) {
 func (f *Fetcher) CategoryMap() (*fstoplib.CategoryMap, error) {
 	return &fstoplib.CategoryMap{
 		"MOVIE": []string{"film"},
-		"TV":    []string{"tv"},
+		"TV":    []string{"tv", "desktop"},
 		"MUSIC": []string{"music"},
 		"CAT3":  []string{"cat3"},
 	}, nil
